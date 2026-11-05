@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #dbeafe;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+}

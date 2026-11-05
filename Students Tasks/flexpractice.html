@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Academy</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #111;
+        background: #fff;
+      }
+      .page {
+        max-width: 1100px;
+        margin: auto;
+        border: 1px solid #dedede;
+        border-radius: 9px;
+        padding: 6px;
+      }
+      .navbar {
+        background: #192c4d;
+        color: white;
+        min-height: 38px;
+        border-radius: 5px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .nav-links {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 9px;
+        font-weight: bold;
+      }
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        margin-top: 7px;
+        min-height: 117px;
+        border-radius: 5px;
+        background: #e9f1ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px;
+      }
+      .hero h1 {
+        margin: 0 0 12px;
+        color: #1c3154;
+        font-size: 16px;
+      }
+      .hero p {
+        color: #52657f;
+        font-size: 9px;
+        margin: 0 0 11px;
+      }
+      .btn {
+        background: #2460e9;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        padding: 7px 13px;
+        border-radius: 4px;
+        font-size: 9px;
+        font-weight: bold;
+      }
+      .btn:hover {
+        background: #1649bd;
+      }
+      section {
+        margin: 0;
+      }
+      .section-title {
+        font-size: 13px;
+        font-weight: normal;
+        text-align: center;
+        margin: 18px 0 11px;
+      }
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 9px;
+      }
+      .about-placeholder {
+        flex: 1;
+        min-height: 101px;
+        background: #dceaff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-placeholder strong {
+        font-size: 11px;
+        color: #2460e9;
+      }
+      .about-placeholder span {
+        font-size: 8px;
+        color: #718096;
+      }
+      .about-text {
+        flex: 1;
+        padding: 8px 0;
+      }
+      .about-text h3 {
+        font-size: 12px;
+        margin: 0 0 8px;
+      }
+      .about-text p {
+        font-size: 9px;
+        line-height: 1.35;
+        color: #555;
+        margin: 0 0 8px;
+      }
+      .about-text a {
+        color: #2460e9;
+        text-decoration: none;
+        font-size: 10px;
+      }
+      .courses {
+        margin-top: 27px;
+      }
+      .card-row {
+        display: flex;
+        gap: 6px;
+        padding: 0 9px;
+      }
+      .course-card {
+        flex: 1;
+        min-width: 0;
+        border: 1px solid #d8d8d8;
+        border-radius: 5px;
+        background: #f4f4f4;
+        text-align: center;
+        padding: 9px 6px 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .course-card h3 {
+        font-size: 12px;
+        margin: 0 0 9px;
+      }
+      .course-card p {
+        color: #777;
+        font-size: 8px;
+        margin: 0 0 8px;
+      }
+      .course-card .btn {
+        font-size: 8px;
+        padding: 6px 8px;
+        margin-top: auto;
+      }
+      .features {
+        margin-top: 27px;
+      }
+      .feature-card {
+        flex: 1;
+        min-height: 52px;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 10px;
+      }
+      .contact {
+        background: #e9f1ff;
+        border-radius: 5px;
+        text-align: center;
+        padding: 15px 10px 11px;
+        margin-top: 15px;
+      }
+      .contact h2 {
+        color: #1c3154;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0 0 10px;
+      }
+      .contact p {
+        color: #52657f;
+        font-size: 9px;
+        margin: 0 0 8px;
+      }
+      footer {
+        background: #192c4d;
+        color: white;
+        border-radius: 5px;
+        margin-top: 6px;
+        text-align: center;
+        padding: 10px;
+        font-size: 9px;
+        font-weight: bold;
+      }
+      @media (max-width: 450px) {
+        .navbar {
+          gap: 10px;
+          flex-wrap: wrap;
+          padding: 10px;
+        }
+        .nav-links {
+          flex-wrap: wrap;
+        }
+        .about-content,
+        .card-row {
+          flex-direction: column;
+        }
+        .about-placeholder {
+          flex: auto;
+          width: 100%;
+          min-height: 100px;
+        }
+        .course-card,
+        .feature-card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="navbar">
+        <div class="logo">Tech Academy</div>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <h1>Learn Skills. Build Your Future.</h1>
+          <p>Start your journey in web development with Tech Academy.</p>
+          <a href="#courses" class="btn">Explore Courses</a>
+        </section>
+
+        <section id="about">
+          <h2 class="section-title">About Our Academy</h2>
+          <div class="about-content">
+            <div class="about-placeholder">
+              <strong>Tech Academy</strong>
+              <span>Learning Center</span>
+            </div>
+            <div class="about-text">
+              <h3>Who We Are</h3>
+              <p>
+                We help students learn web development through simple lessons
+                and practical projects.
+              </p>
+              <a href="#features">Read More</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="courses" id="courses">
+          <h2 class="section-title">Our Courses</h2>
+          <div class="card-row">
+            <div class="course-card">
+              <h3>HTML</h3>
+              <p>Build website structure</p>
+              <a class="btn" href="#contact">Learn More</a>
+            </div>
+            <div class="course-card">
+              <h3>CSS</h3>
+              <p>Style your webpages</p>
+              <a class="btn" href="#contact">Learn More</a>
+            </div>
+            <div class="course-card">
+              <h3>JavaScript</h3>
+              <p>Make websites interactive</p>
+              <a class="btn" href="#contact">Learn More</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="features" id="features">
+          <h2 class="section-title">Why Choose Us?</h2>
+          <div class="card-row">
+            <div class="feature-card">Expert Teachers</div>
+            <div class="feature-card">Practical Learning</div>
+            <div class="feature-card">Easy Lessons</div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <h2>Contact Us</h2>
+          <p>Email: techacademy@example.com</p>
+          <p>Phone: 0300-1234567</p>
+        </section>
+      </main>
+
+      <footer>&copy; 2026 Tech Academy. All Rights Reserved.</footer>
+    </div>
+  </body>
+</html>

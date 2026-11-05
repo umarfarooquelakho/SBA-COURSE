@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flexbox.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            background-color: lightgray;
+            justify-content: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(127, 247, 173);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+</html>

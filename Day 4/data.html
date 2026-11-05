@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            flex-wrap: nowrap;
+
+            justify-content: flex-end;
+            justify-content: flex-start;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: center;
+            align-items: stretch;
+        }
+
+        .child {
+            flex-grow: 1;
+            flex-shrink: 1 or 2 or 3;
+            flex-basis: 100px or 200px or 300px;
+            flex: 1(grow) 2(shrink) 3(basis) ;
+        }
+    </style> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 500px;
+            border:  solid black 6px;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-flow: row wrap; */
+            /* flex-wrap: wrap; */
+            /* justify-content: flex-end; */
+            /* align-items: center; */
+        }
+
+        .boxes {
+            height: 80px;
+            /* width: 120px; */
+            font-size: 48px;
+            color: white;
+            display: flex;
+        }
+
+        .flex-item-1 {
+            background-color: red;
+            flex-basis: 70px;
+            /* flex-shrink: 3; */
+            /* order: 3; */
+            /* flex-grow: 1; */
+        }
+
+        .flex-item-2 {
+            background-color: green;
+            flex-basis: 100px;
+            flex-shrink: 2;
+            /* order: 2; */
+            /* flex-grow: ; */
+        }
+
+        .flex-item-3 {
+            background-color: blue;
+            flex-basis: 150px;
+            flex-shrink: 1;
+            /* order: 1; */
+            /* flex-grow: 1; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes flex-item-1">1</div>
+        <div class="boxes flex-item-2">2</div>
+        <div class="boxes flex-item-3">3</div>
+        <!-- <div class="boxes flex-item-2">4</div>
+        <div class="boxes flex-item-1">5</div>
+        <div class="boxes flex-item-3">6</div> -->
+    </div>
+</body>
+</html>
